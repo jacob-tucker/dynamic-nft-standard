@@ -8,10 +8,19 @@ An example use case would be when a project wants to upgrade their holder's NFTs
 
 ## Steps to Mint
 
-1. In Terminal #1: `flow emulator start -v`
-2. In Terminal #2: `flow project deploy`
-3. `flow transactions send ./transactions/setupAccount.cdc`
-4. `flow transactions send ./transactions/mintNFT.cdc 0xf8d6e0586b0a20c7 "Weak Weapon" "This is the weakest weapon you can own" "Random CID" {}`
+In Terminal #1: 
+
+```
+flow emulator start -v
+```
+
+In Terminal #2:
+
+```
+flow project deploy
+flow transactions send ./transactions/setupAccount.cdc
+flow transactions send ./transactions/mintNFT.cdc 0xf8d6e0586b0a20c7 "Weak Weapon" "This is the weakest weapon you can own" "Random CID" {}
+```
 
 ## View NFTs in Account
 
