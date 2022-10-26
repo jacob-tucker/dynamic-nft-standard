@@ -24,12 +24,20 @@ flow transactions send ./transactions/mintNFT.cdc 0xf8d6e0586b0a20c7 "Weak Weapo
 
 ## View NFTs in Account
 
-1. `flow scripts execute ./scripts/getNFTs.cdc 0xf8d6e0586b0a20c7`
+In Terminal #2:
+
+```
+flow scripts execute ./scripts/getNFTs.cdc 0xf8d6e0586b0a20c7
+```
 
 ## How to Update Metadata
 
 The account with the `Administrator` resource would use the `transactions/updateNFTMetadata.cdc` transaction to do this. You pass in the NFT's id as well as the current owner of the NFT, and pass in a new name, description, thumbnail, and metadata dictionary. This will automatically update the NFT owned by the current owner with the specific id to that new metadata.
 
-1. `flow transactions send ./transactions/updateNFTMetadata.cdc 0xf8d6e0586b0a20c7 [INSERT THE NFT ID FROM "How to Update Metadata" Section] "Strong Weapon" "This weapon is the next strongest weapon after the Weak Weapon." "Random CID" {}`
+In Terminal #2:
+
+```
+flow transactions send ./transactions/updateNFTMetadata.cdc 0xf8d6e0586b0a20c7 [INSERT THE NFT ID FROM "How to Update Metadata" Section] "Strong Weapon" "This weapon is the next strongest weapon after the Weak Weapon." "Random CID" {}
+```
 
 Now follow the "How to Update Metadata" section again to see the NFT's updated metadata.
